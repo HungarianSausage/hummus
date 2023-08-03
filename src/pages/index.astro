@@ -22,23 +22,33 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    callToAction={{ text: 'Get template', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:download' }}
+    callToAction={{ text: 'Join Our Newsletter', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:mail-filled' }}
     callToAction2={{ text: 'Learn more', href: '#features' }}
-    image={{ src: import('~/assets/images/hero.png'), alt: 'AstroWind Hero Image' }}
+    image={{ src: import('~/assets/images/Manila-bg.png'), alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 2.0</span> + Tailwind CSS    </Fragment>
+      The Nexus of the <span class="bg-gradient-to-r from-red-600 via-yellow-400 to-blue-600 text-transparent bg-clip-text">Philippines</span> and the Global Family Office Ecosystem</Fragment>
 
-    <Fragment slot="subtitle">
+    <!-- <Fragment slot="subtitle">
       <span class="hidden sm:inline">
         <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 2.0 +
         Tailwind CSS.</span
       >
       <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span> Suitable for Startups,
       Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.
-    </Fragment>
+    </Fragment> -->
   </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    items={[
+      { name: 'Downloads', value: '132K' },
+      { name: 'Stars', value: '24.8K' },
+      { name: 'Forks', value: '10.3K' },
+      { name: 'Users', value: '48.4K' },
+    ]}
+  />
 
   <!-- Note Widget ******************* -->
 
@@ -305,17 +315,6 @@ const metadata = {
         description:
           "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
       },
-    ]}
-  />
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    items={[
-      { name: 'Downloads', value: '132K' },
-      { name: 'Stars', value: '24.8K' },
-      { name: 'Forks', value: '10.3K' },
-      { name: 'Users', value: '48.4K' },
     ]}
   />
 
