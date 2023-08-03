@@ -31,35 +31,35 @@ const {
 } = Astro.props;
 ---
 
-<section class:list={[{ 'pt-0 md:pt-0': isAfterContent }, 'bg-blue-50 dark:bg-page py-16 md:py-20 not-prose']}>
-  <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
+<section class:list={[{ 'pt-0 md:pt-0 h-full': isAfterContent }, 'bg-blue-50 dark:bg-page py-16 md:py-20 not-prose h-full']}>
+  <div class="max-w-xl sm:mx-auto lg:max-w-2xl h-full">
     {
       (title || subtitle || tagline) && (
-        <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
+        <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl h-full">
           {tagline && (
             <p
-              class="text-base text-primary dark:text-blue-200 font-semibold tracking-wide uppercase"
+              class="text-base text-primary dark:text-blue-200 font-semibold tracking-wide uppercase h-full"
               set:html={tagline}
             />
           )}
           {title && (
             <h2
-              class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
+              class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading h-full"
               set:html={title}
             />
           )}
 
           {subtitle && (
-            <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400" set:html={subtitle} />
+            <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400 h-full" set:html={subtitle} />
           )}
         </div>
       )
     }
   </div>
-  <div class="mx-auto max-w-7xl p-4 md:px-8">
-    <div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
-      <div class="md:basis-1/2 self-center">
-        {content && <div class="mb-12 text-lg dark:text-slate-400" set:html={content} />}
+  <div class="mx-auto max-w-7xl p-4 md:px-8 h-full">
+    <div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16 h-full`}>
+      <div class="md:basis-1/2 self-center h-full">
+        {content && <div class="mb-12 text-lg dark:text-slate-400 h-full" set:html={content} />}
 
         {
           items && (
@@ -81,7 +81,7 @@ const {
           )
         }
       </div>
-      <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
+      <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2 h-full">
         {
           image && (
             <div class="relative m-auto max-w-4xl">
@@ -89,12 +89,11 @@ const {
                 <Fragment set:html={image} />
               ) : (
                 <Picture
-                  class="mx-auto w-full rounded-lg bg-gray-500 shadow-lg"
+                  class="mx-auto h-full w-full rounded-lg bg-gray-500 shadow-lg object-cover aspect-w-4 aspect-h-3"
                   width={500}
                   height={500}
                   widths={[400, 768]}
                   sizes="(max-width: 768px) 100vw, 432px"
-                  aspectRatio="500:500"
                   {...image}
                 />
               )}
@@ -105,3 +104,5 @@ const {
     </div>
   </div>
 </section>
+
+  
