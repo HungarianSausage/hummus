@@ -16,6 +16,9 @@ const metadata = {
   title: "AstroWind — Free template for create a website with Astro + Tailwind CSS",
   dontUseTitleTemplate: true,
 };
+
+// import coolImg from '../assets/images/Manila-bg.png'
+import {  Image } from "astro:assets";
 ---
 
 <Layout metadata={metadata}>
@@ -293,7 +296,7 @@ const metadata = {
 
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-blue-500 dark:bg-transparent"></div>
     </Fragment>
   </Features2>
 
